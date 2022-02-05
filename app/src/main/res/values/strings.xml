@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MpesaAppUIClone</string>
     <string name="mpesa_logo_desc">Mpesa logo</string>
+    <string name="notifications_icon_desc">Notifications Icon</string>
+    <string name="balance_text">BALANCE</string>
+    <string name="balance_amount">KSH. 2,456</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.breens.mpesaappuiclone
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +19,6 @@ class FragmentHome: Fragment(R.layout.fragment_home) {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         hideActionBar()
-        Log.d("HOME SCREEN", "Yes Home Screen")
         return binding.root
     }
 
