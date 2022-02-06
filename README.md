@@ -10,5 +10,7 @@
 <img src="/screenshots/mpesahomescreen.png" width="30%"/>
 </p>
 
-###Original UI
+### Original UI
+<p align="left">
 <img src="/screenshots/mpesaoriginal.jpeg" width="40%"/>
+</p>
