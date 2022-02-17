@@ -75,22 +75,20 @@
             android:id="@+id/balanceAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_semibold"
+            android:fontFamily="@font/nunito"
             android:letterSpacing="0.1"
             android:text="@string/balance_amount"
-            android:textSize="30sp"
+            android:textSize="33sp"
             android:drawablePadding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/myToolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/balanceLabel"
             app:drawableEndCompat="@drawable/visibility" />
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/balanceAmount">
 
@@ -99,9 +97,23 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
-                android:layout_weight="1"
                 android:src="@drawable/sendandrequesticon"
-                app:civ_circle_background_color="@color/green" />
+                app:civ_circle_background_color="@color/green"
+                app:layout_constraintEnd_toStartOf="@+id/pay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sendLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_label"
+                android:fontFamily="@font/nunito"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toBottomOf="@id/sendrequest"
+                app:layout_constraintStart_toStartOf="@id/sendrequest"
+                app:layout_constraintEnd_toEndOf="@id/sendrequest"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/pay"
@@ -110,7 +122,22 @@
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
                 android:src="@drawable/payicon"
-                app:civ_circle_background_color="@color/blue" />
+                app:civ_circle_background_color="#2151C8"
+                app:layout_constraintEnd_toStartOf="@+id/withdraw"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sendrequest"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/payLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pay_label"
+                android:fontFamily="@font/nunito"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toBottomOf="@id/pay"
+                app:layout_constraintStart_toStartOf="@id/pay"
+                app:layout_constraintEnd_toEndOf="@id/pay"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/withdraw"
@@ -119,7 +146,22 @@
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
                 android:src="@drawable/withdraw"
-                app:civ_circle_background_color="@color/red" />
+                app:civ_circle_background_color="@color/red"
+                app:layout_constraintEnd_toStartOf="@+id/airtime"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pay"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/withdrawLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdraw_label"
+                android:fontFamily="@font/nunito"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toBottomOf="@id/withdraw"
+                app:layout_constraintStart_toStartOf="@id/withdraw"
+                app:layout_constraintEnd_toEndOf="@id/withdraw"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/airtime"
@@ -128,9 +170,25 @@
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
                 android:src="@drawable/airtimephoneicon"
-                app:civ_circle_background_color="@color/light" />
+                app:civ_circle_background_color="#03A9F4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/withdraw"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/airtimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/airtime_label"
+                android:fontFamily="@font/nunito"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toBottomOf="@id/airtime"
+                app:layout_constraintStart_toStartOf="@id/airtime"
+                app:layout_constraintEnd_toEndOf="@id/airtime"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.appbar.AppBarLayout>
 

@@ -4,4 +4,8 @@
     <string name="notifications_icon_desc">Notifications Icon</string>
     <string name="balance_text">BALANCE</string>
     <string name="balance_amount">KSH. 2,456</string>
+    <string name="send_label">Send</string>
+    <string name="pay_label">pay</string>
+    <string name="withdraw_label">Withdraw</string>
+    <string name="airtime_label">Airtime</string>
 </resources>
