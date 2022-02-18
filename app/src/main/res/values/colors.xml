@@ -12,4 +12,18 @@
     <color name="light">#2979FF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#7A7979</color>
+
+    //First CardView Colors
+    <color name="dark_orange">#ef6136</color>
+    <color name="dark_blue">#346fde</color>
+    <color name="pink">#cf4195</color>
+
+    //Second CardView Colors
+    <color name="darker_orange">#ff6319</color>
+
+    //Third CardView Colors
+    <color name="darker_blue">#1074ff</color>
+
+    //Fourth CardView Colors
+    <color name="darker_pink">#b138eb</color>
 </resources>

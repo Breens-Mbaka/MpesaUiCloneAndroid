@@ -8,4 +8,15 @@
     <string name="pay_label">pay</string>
     <string name="withdraw_label">Withdraw</string>
     <string name="airtime_label">Airtime</string>
+    <string name="spent_weekly_label">TOTAL SPENT THIS WEEK</string>
+    <string name="amount_label">KSH. 1,500.00</string>
+    <string name="amount">KSH.845.87</string>
+    <string name="daily_average_label">DAILY AVERAGE</string>
+    <string name="my_spend_label">MY SPEND</string>
+    <string name="general_label">GENERAL</string>
+    <string name="rate">63%</string>
+    <string name="amount_general">KSH.1,499.00</string>
+    <string name="family">FAMILY AND FRIENDS</string>
+    <string name="family_rate">33%</string>
+    <string name="bill_rate">4%</string>
 </resources>
