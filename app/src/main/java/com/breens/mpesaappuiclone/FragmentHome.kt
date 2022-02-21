@@ -6,12 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.breens.mpesaappuiclone.databinding.FragmentHomeBinding
 
 class FragmentHome : Fragment(R.layout.fragment_home) {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var mRecyclerview: RecyclerView
+
+
 
     private val titleList = mutableListOf(
         "TOTAL SPENT THIS WEEK",
@@ -21,15 +26,11 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
     )
     private val titleListTwo =
         mutableListOf("KSH. 1,500.00", "KSH. 1,500.00", "KSH. 1,500.00", "KSH. 1,500.00")
-    private val titleListThree =
-        mutableListOf("DAILY AVERAGE", "DAILY AVERAGE", "DAILY AVERAGE", "DAILY AVERAGE")
-    private val titleListFour =
-        mutableListOf("KSH.845.87", "KSH.845.87", "KSH.845.87", "KSH.845.87")
-    private val iconsList = mutableListOf(
-        R.drawable.mpesaloading,
-        R.drawable.general,
-        R.drawable.family,
-        R.drawable.bills
+    private val titleListThree = mutableListOf("DAILY AVERAGE", "DAILY AVERAGE", "DAILY AVERAGE", "DAILY AVERAGE")
+    private val titleListFour = mutableListOf("KSH.845.87", "KSH.845.87", "KSH.845.87", "KSH.845.87")
+
+
+    private val iconsList = mutableListOf(R.drawable.mpesaloading, R.drawable.general, R.drawable.family, R.drawable.bills
     )
     private val backgroundList = mutableListOf(
         R.drawable.first_cardview_bg,
@@ -46,6 +47,7 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         hideActionBar()
         initAdapter()
+        initRecyclerview()
         return binding.root
     }
 
@@ -63,7 +65,23 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
         }
         val indicator = binding.indicator
         indicator.setViewPager(binding.viewPager)
+    }
 
+    private fun initRecyclerview() {
+        mRecyclerview = binding.statementRecyclerview
+        mRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+        val data = ArrayList<Statement>()
+        data.add(Statement("KS","GROCERY","122229393","Ksh. 2,455.0","12/01/2022"))
+        data.add(Statement("AP","AIRTIME PURCHASE","1234","Ksh. 12.34","10/06/2022"))
+        data.add(Statement("KS","GYM","122229393","Ksh. 2,455.0","12/01/2022"))
+        data.add(Statement("AP","NETFLIX","1234","Ksh. 12.34","10/06/2022"))
+        data.add(Statement("KS","PRIME","122229393","Ksh. 2,455.0","12/01/2022"))
+        data.add(Statement("AP","SHOWMAX","1234","Ksh. 12.34","10/06/2022"))
+        data.add(Statement("KS","TWITCH","122229393","Ksh. 2,455.0","12/01/2022"))
+        data.add(Statement("AP","YOUTUBE","1234","Ksh. 12.34","10/06/2022"))
+
+        val adapter = StatementAdapter(data)
+        mRecyclerview.adapter = adapter
     }
 
     private fun hideActionBar() {

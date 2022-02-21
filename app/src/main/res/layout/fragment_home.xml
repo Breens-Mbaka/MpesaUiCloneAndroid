@@ -39,7 +39,7 @@
                 android:src="@drawable/profile"
                 app:avatarViewBorderWidth="2dp"
                 app:avatarViewIndicatorColor="@color/green"
-                app:avatarViewIndicatorEnabled="true"
+                app:avatarViewIndicatorEnabled="false"
                 app:avatarViewIndicatorPosition="bottomRight"
                 app:avatarViewInitialsTextStyle="bold"
                 app:avatarViewShape="circle"
@@ -226,9 +226,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/statements_label"
-        android:fontFamily="@font/nunito"
+        android:fontFamily="@font/nunito_bold"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/indicator"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/statementRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mpesaTitle"
+        tools:listitem="@layout/item_statement" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEE ALL"
+        android:textColor="@color/green"
+        android:fontFamily="@font/nunito"
+        app:layout_constraintBottom_toBottomOf="@+id/mpesaTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mpesaTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
