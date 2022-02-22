@@ -19,12 +19,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/myToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:background="?attr/colorPrimary"
+                android:background="@color/white"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -32,19 +31,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <io.getstream.avatarview.AvatarView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/profile"
-                app:avatarViewBorderWidth="2dp"
-                app:avatarViewIndicatorColor="@color/green"
-                app:avatarViewIndicatorEnabled="false"
-                app:avatarViewIndicatorPosition="bottomRight"
-                app:avatarViewInitialsTextStyle="bold"
-                app:avatarViewShape="circle"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageView
                 android:id="@+id/notificationsIcon"
@@ -96,17 +91,43 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/balanceAmount">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/sendrequest"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    app:cardCornerRadius="20dp"
+                    android:backgroundTint="@color/green"
+                    app:cardElevation="0dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/sendandrequesticon"
-                    app:civ_circle_background_color="@color/green"
                     app:layout_constraintEnd_toStartOf="@+id/pay"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sendandrequesticon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/sendrequest"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:src="@drawable/sendandrequesticon"-->
+<!--                    app:civ_circle_background_color="@color/green"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/pay"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
                 <TextView
                     android:id="@+id/sendLabel"
@@ -121,18 +142,32 @@
                     app:layout_constraintStart_toStartOf="@id/sendrequest"
                     app:layout_constraintEnd_toEndOf="@id/sendrequest" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/pay"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    app:cardCornerRadius="20dp"
+                    android:backgroundTint="@color/blue"
+                    app:cardElevation="0dp"
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/payicon"
-                    app:civ_circle_background_color="#2151C8"
                     app:layout_constraintEnd_toStartOf="@+id/withdraw"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/sendrequest"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/payicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/payLabel"
@@ -146,18 +181,32 @@
                     app:layout_constraintStart_toStartOf="@id/pay"
                     app:layout_constraintEnd_toEndOf="@id/pay" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/withdraw"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    app:cardCornerRadius="20dp"
+                    android:backgroundTint="@color/red"
+                    app:cardElevation="0dp"
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/withdraw"
-                    app:civ_circle_background_color="@color/red"
                     app:layout_constraintEnd_toStartOf="@+id/airtime"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/pay"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/withdraw"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/withdrawLabel"
@@ -171,18 +220,32 @@
                     app:layout_constraintStart_toStartOf="@id/withdraw"
                     app:layout_constraintEnd_toEndOf="@id/withdraw" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/airtime"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    app:cardCornerRadius="20dp"
+                    android:backgroundTint="@color/light"
+                    app:cardElevation="0dp"
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/airtimephoneicon"
-                    app:civ_circle_background_color="#03A9F4"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/withdraw"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/airtimephoneicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/airtimeLabel"
@@ -201,58 +264,74 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
-
-    <me.relex.circleindicator.CircleIndicator3
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:layout_marginTop="15dp"
-        app:ci_drawable="@drawable/selected_indicator"
-        app:ci_drawable_unselected="@drawable/unselected_indicator"
-        app:layout_constraintTop_toBottomOf="@id/viewPager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/mpesaTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/statements_label"
-        android:fontFamily="@font/nunito_bold"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@id/indicator"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/statementRecyclerview"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_scrollview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mpesaTitle"
-        tools:listitem="@layout/item_statement" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SEE ALL"
-        android:textColor="@color/green"
-        android:fontFamily="@font/nunito"
-        app:layout_constraintBottom_toBottomOf="@+id/mpesaTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mpesaTitle" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="15dp"
+                app:ci_drawable="@drawable/selected_indicator"
+                app:ci_drawable_unselected="@drawable/unselected_indicator"
+                app:layout_constraintTop_toBottomOf="@id/viewPager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/mpesaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/statements_label"
+                android:fontFamily="@font/nunito_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/indicator"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/statementRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mpesaTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/item_statement" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEE ALL"
+                android:textColor="@color/green"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintBottom_toBottomOf="@+id/mpesaTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mpesaTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

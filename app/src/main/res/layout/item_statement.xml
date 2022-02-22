@@ -14,10 +14,9 @@
         app:avatarViewInitialsBackgroundColor="#f1f8e9"
         app:avatarViewIndicatorBorderColor="@color/white"
         app:avatarViewIndicatorBorderSizeCriteria="10"
-        app:avatarViewIndicatorEnabled="true"
-        app:avatarViewIndicatorPosition="bottomRight"
-        app:avatarViewIndicatorSizeCriteria="9"
+        app:avatarViewIndicatorEnabled="false"
         app:avatarViewInitialsTextStyle="bold"
+        app:avatarViewInitialsTextColor="#bbdefb"
         app:avatarViewShape="circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +50,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:text="TextView"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/shop" />
@@ -62,9 +61,8 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/id"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/amount"
         app:layout_constraintTop_toBottomOf="@+id/amount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
