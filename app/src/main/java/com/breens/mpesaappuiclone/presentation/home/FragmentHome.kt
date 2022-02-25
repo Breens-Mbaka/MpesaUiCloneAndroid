@@ -17,8 +17,8 @@ import com.breens.mpesaappuiclone.common.AppConstants.titleListThree
 import com.breens.mpesaappuiclone.common.AppConstants.titleListTwo
 import com.breens.mpesaappuiclone.data.model.Statement
 import com.breens.mpesaappuiclone.databinding.FragmentHomeBinding
-import com.breens.mpesaappuiclone.presentation.StatementAdapter
-import com.breens.mpesaappuiclone.presentation.ViewPagerAdapter
+import com.breens.mpesaappuiclone.presentation.interface_adapters.StatementAdapter
+import com.breens.mpesaappuiclone.presentation.interface_adapters.ViewPagerAdapter
 
 class FragmentHome : Fragment(R.layout.fragment_home) {
     private lateinit var _binding: FragmentHomeBinding

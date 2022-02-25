@@ -6,7 +6,7 @@
     <data>
         <variable
             name="statementAdapter"
-            type="com.breens.mpesaappuiclone.presentation.StatementAdapter" />
+            type="com.breens.mpesaappuiclone.presentation.interface_adapters.StatementAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

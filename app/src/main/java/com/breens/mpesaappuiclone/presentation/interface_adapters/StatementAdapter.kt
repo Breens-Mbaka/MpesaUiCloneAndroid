@@ -1,15 +1,11 @@
-package com.breens.mpesaappuiclone.presentation
+package com.breens.mpesaappuiclone.presentation.interface_adapters
 
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.breens.mpesaappuiclone.R
 import com.breens.mpesaappuiclone.data.model.Statement
 import com.breens.mpesaappuiclone.databinding.ItemStatementBinding
-import io.getstream.avatarview.AvatarView
 
 class StatementAdapter(private val mList: List<Statement>) : RecyclerView.Adapter<StatementAdapter.ViewHolder>() {
 

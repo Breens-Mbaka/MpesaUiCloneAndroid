@@ -1,4 +1,4 @@
-package com.breens.mpesaappuiclone.presentation
+package com.breens.mpesaappuiclone.presentation.splash
 
 import android.os.Bundle
 import android.os.Handler

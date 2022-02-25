@@ -1,4 +1,4 @@
-package com.breens.mpesaappuiclone.presentation
+package com.breens.mpesaappuiclone.presentation.transact
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
