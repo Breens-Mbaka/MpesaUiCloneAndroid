@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.breens.mpesaappuiclone.R
 import com.breens.mpesaappuiclone.common.AppConstants.backgroundList
@@ -16,7 +15,7 @@ import com.breens.mpesaappuiclone.common.AppConstants.titleList
 import com.breens.mpesaappuiclone.common.AppConstants.titleListFour
 import com.breens.mpesaappuiclone.common.AppConstants.titleListThree
 import com.breens.mpesaappuiclone.common.AppConstants.titleListTwo
-import com.breens.mpesaappuiclone.data.Statement
+import com.breens.mpesaappuiclone.data.model.Statement
 import com.breens.mpesaappuiclone.databinding.FragmentHomeBinding
 import com.breens.mpesaappuiclone.presentation.StatementAdapter
 import com.breens.mpesaappuiclone.presentation.ViewPagerAdapter

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="cardInfo"
+            type="com.breens.mpesaappuiclone.data.model.CardInfo" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -15,7 +17,7 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            tools:background="@drawable/first_cardview_bg"
+            app:myCardBackground="@{cardInfo.background}"
             android:padding="10dp">
 
             <TextView
@@ -23,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
-                android:text="Title"
+                android:text="@{cardInfo.mainTitle}"
                 android:textColor="#CAC8C8"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/nunito"
-                android:text="Title Two"
+                android:text="@{cardInfo.mainAmount}"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/spent_this_week_label"
@@ -45,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
-                android:text="Title Four"
+                android:text="@{cardInfo.subAmount}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
-                android:text="Title Three"
+                android:text="@{cardInfo.subTitle}"
                 android:textColor="#E6E5E5"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -81,7 +83,7 @@
                 android:layout_height="85dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:srcCompat="@drawable/mpesaloading" />
+                app:cardIcon="@{cardInfo.icon}"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

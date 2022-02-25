@@ -3,7 +3,7 @@ package com.breens.mpesaappuiclone.presentation.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.breens.mpesaappuiclone.data.Statement
+import com.breens.mpesaappuiclone.data.model.Statement
 
 
 class HomeViewModel : ViewModel() {

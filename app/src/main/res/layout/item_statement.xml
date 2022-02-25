@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="statement"
+            type="com.breens.mpesaappuiclone.data.model.Statement" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +26,7 @@
             app:avatarViewInitialsTextStyle="bold"
             app:avatarViewInitialsTextColor="#bbdefb"
             app:avatarViewShape="circle"
+            app:statementInitials="@{statement.initials}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="shop"
+            android:text="@{statement.shopName}"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/avatarView"
             app:layout_constraintTop_toTopOf="@+id/avatarView" />
@@ -44,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="TextView"
+            android:text="@{statement.transactionId}"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="@+id/avatarView"
             app:layout_constraintStart_toEndOf="@+id/avatarView"
@@ -55,7 +58,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_bold"
-            android:text="TextView"
+            android:text="@{statement.amount}"
             android:textSize="12sp"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +68,7 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@{statement.transactionDate}"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

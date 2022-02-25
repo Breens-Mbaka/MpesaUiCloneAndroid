@@ -9,39 +9,44 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.breens.mpesaappuiclone.R
+import com.breens.mpesaappuiclone.data.model.CardInfo
+import com.breens.mpesaappuiclone.databinding.ItemCardviewBinding
 
 class ViewPagerAdapter(private var title: List<String>,private var titleTwo: List<String>, private var titleThree: List<String>, private var titleFour: List<String>, private var icon: List<Int>, private var background: List<Int>): RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
 
-    inner class Pager2ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class Pager2ViewHolder(val binding:ItemCardviewBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        val itemTitle: TextView = itemView.findViewById(R.id.spent_this_week_label)
-        val itemTitleTwo : TextView = itemView.findViewById(R.id.weekly_amount)
-        val itemTitleThree: TextView = itemView.findViewById(R.id.textView4)
-        val itemTitleFour: TextView = itemView.findViewById(R.id.textView3)
-        val icon: ImageView = itemView.findViewById(R.id.mpesaloading)
-        val background: ConstraintLayout = itemView.findViewById(R.id.container)
+        fun bind(position: Int){
+            binding.apply {
+                val cardInformation = CardInfo(
+                    mainTitle = title[position],
+                    mainAmount = titleTwo[position],
+                    subTitle = titleFour[position],
+                    subAmount = titleThree[position],
+                    icon = icon[position],
+                    background = background[position]
+                )
+                cardInfo = cardInformation
+
+            }
+        }
+
         init {
-            icon.setOnClickListener {
+            binding.mpesaloading.setOnClickListener {
                 val position = adapterPosition
                 Toast.makeText(itemView.context, "You clicked on item #${position + 1}", Toast.LENGTH_SHORT)
             }
         }
     }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): Pager2ViewHolder {
-        return Pager2ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_cardview, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Pager2ViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = ItemCardviewBinding.inflate(inflater, parent, false)
+        return Pager2ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: Pager2ViewHolder, position: Int) {
-        holder.itemTitle.text = title[position]
-        holder.itemTitleTwo.text = titleTwo[position]
-        holder.itemTitleThree.text = titleThree[position]
-        holder.itemTitleFour.text = titleFour[position]
-        holder.icon.setImageResource(icon[position])
-        holder.background.setBackgroundResource(background[position])
+        holder.bind(position)
     }
 
     override fun getItemCount(): Int {
