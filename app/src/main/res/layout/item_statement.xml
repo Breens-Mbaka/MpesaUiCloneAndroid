@@ -1,68 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <io.getstream.avatarview.AvatarView
-        android:id="@+id/avatarView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:avatarViewBorderColor="@color/white"
-        app:avatarViewBorderWidth="3dp"
-        app:avatarViewInitialsBackgroundColor="#f1f8e9"
-        app:avatarViewIndicatorBorderColor="@color/white"
-        app:avatarViewIndicatorBorderSizeCriteria="10"
-        app:avatarViewIndicatorEnabled="false"
-        app:avatarViewInitialsTextStyle="bold"
-        app:avatarViewInitialsTextColor="#bbdefb"
-        app:avatarViewShape="circle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <TextView
-        android:id="@+id/shop"
-        android:layout_width="wrap_content"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/nunito_bold"
-        android:text="shop"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/avatarView"
-        app:layout_constraintTop_toTopOf="@+id/avatarView" />
+        android:layout_marginBottom="15dp">
 
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="TextView"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/avatarView"
-        app:layout_constraintStart_toEndOf="@+id/avatarView"
-        app:layout_constraintTop_toBottomOf="@+id/shop" />
+        <io.getstream.avatarview.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:avatarViewBorderColor="@color/white"
+            app:avatarViewBorderWidth="3dp"
+            app:avatarViewInitialsBackgroundColor="#f1f8e9"
+            app:avatarViewIndicatorBorderColor="@color/white"
+            app:avatarViewIndicatorBorderSizeCriteria="10"
+            app:avatarViewIndicatorEnabled="false"
+            app:avatarViewInitialsTextStyle="bold"
+            app:avatarViewInitialsTextColor="#bbdefb"
+            app:avatarViewShape="circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/amount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_bold"
-        android:text="TextView"
-        android:textSize="12sp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/shop" />
+        <TextView
+            android:id="@+id/shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="shop"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/avatarView"
+            app:layout_constraintTop_toTopOf="@+id/avatarView" />
 
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amount" />
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatarView"
+            app:layout_constraintStart_toEndOf="@+id/avatarView"
+            app:layout_constraintTop_toBottomOf="@+id/shop" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:text="TextView"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shop" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
