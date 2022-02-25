@@ -1,4 +1,4 @@
-package com.breens.mpesaappuiclone
+package com.breens.mpesaappuiclone.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import coil.load
+import com.breens.mpesaappuiclone.R
+import com.breens.mpesaappuiclone.data.Statement
 import com.breens.mpesaappuiclone.databinding.FragmentHomeBinding
 
 class FragmentHome : Fragment(R.layout.fragment_home) {
@@ -29,7 +30,8 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
     private val titleListFour = mutableListOf("KSH.845.87", "KSH.845.87", "KSH.845.87", "KSH.845.87")
 
 
-    private val iconsList = mutableListOf(R.drawable.mpesaloading, R.drawable.general, R.drawable.family, R.drawable.bills
+    private val iconsList = mutableListOf(
+        R.drawable.mpesaloading, R.drawable.general, R.drawable.family, R.drawable.bills
     )
     private val backgroundList = mutableListOf(
         R.drawable.first_cardview_bg,

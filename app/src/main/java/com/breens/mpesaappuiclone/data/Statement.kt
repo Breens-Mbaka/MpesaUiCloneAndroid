@@ -1,4 +1,4 @@
-package com.breens.mpesaappuiclone
+package com.breens.mpesaappuiclone.data
 
 data class Statement(
     val initials: String,

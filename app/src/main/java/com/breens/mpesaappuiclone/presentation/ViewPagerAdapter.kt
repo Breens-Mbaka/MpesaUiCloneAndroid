@@ -1,6 +1,5 @@
-package com.breens.mpesaappuiclone
+package com.breens.mpesaappuiclone.presentation
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.chip.Chip
+import com.breens.mpesaappuiclone.R
 
 class ViewPagerAdapter(private var title: List<String>,private var titleTwo: List<String>, private var titleThree: List<String>, private var titleFour: List<String>, private var icon: List<Int>, private var background: List<Int>): RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
 
@@ -32,11 +31,11 @@ class ViewPagerAdapter(private var title: List<String>,private var titleTwo: Lis
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ViewPagerAdapter.Pager2ViewHolder {
+    ): Pager2ViewHolder {
         return Pager2ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_cardview, parent, false))
     }
 
-    override fun onBindViewHolder(holder: ViewPagerAdapter.Pager2ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: Pager2ViewHolder, position: Int) {
         holder.itemTitle.text = title[position]
         holder.itemTitleTwo.text = titleTwo[position]
         holder.itemTitleThree.text = titleThree[position]

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentSplash"
-        android:name="com.breens.mpesaappuiclone.FragmentSplash"
+        android:name="com.breens.mpesaappuiclone.presentation.FragmentSplash"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -16,22 +16,22 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="com.breens.mpesaappuiclone.FragmentHome"
+        android:name="com.breens.mpesaappuiclone.presentation.FragmentHome"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/fragmentTransact"
-        android:name="com.breens.mpesaappuiclone.FragmentTransact"
+        android:name="com.breens.mpesaappuiclone.presentation.FragmentTransact"
         android:label="fragment_transact"
         tools:layout="@layout/fragment_transact" />
     <fragment
         android:id="@+id/fragmentDiscover"
-        android:name="com.breens.mpesaappuiclone.FragmentDiscover"
+        android:name="com.breens.mpesaappuiclone.presentation.FragmentDiscover"
         android:label="fragment_discover"
         tools:layout="@layout/fragment_discover" />
     <fragment
         android:id="@+id/fragmentGrow"
-        android:name="com.breens.mpesaappuiclone.FragmentGrow"
+        android:name="com.breens.mpesaappuiclone.presentation.FragmentGrow"
         android:label="fragment_grow"
         tools:layout="@layout/fragment_grow" />
 </navigation>
