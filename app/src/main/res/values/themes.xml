@@ -13,4 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+<!--    Optional Implementation of the Splashscreen Api-->
+    <!--<style name="SplashTheme" parent="Theme.MpesaAppUIClone">
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/mpesalogo</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+    </style>
+-->
 </resources>
