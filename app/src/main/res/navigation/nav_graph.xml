@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="com.breens.mpesaappuiclone.presentation.FragmentHome"
+        android:name="com.breens.mpesaappuiclone.presentation.home.FragmentHome"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment

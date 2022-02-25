@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="statementAdapter"
+            type="com.breens.mpesaappuiclone.presentation.StatementAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="15dp"
-        tools:context=".presentation.FragmentHome">
+        tools:context=".presentation.home.FragmentHome">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
@@ -331,7 +333,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/mpesaTitle"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    tools:listitem="@layout/item_statement" />
+                    tools:listitem="@layout/item_statement"
+                    android:adapter="@{statementAdapter}"/>
 
                 <TextView
                     android:id="@+id/textView"
