@@ -7,31 +7,32 @@
 
     <fragment
         android:id="@+id/fragmentSplash"
-        android:name="com.breens.mpesaappuiclone.FragmentSplash"
+        android:name="com.breens.mpesaappuiclone.presentation.splash.FragmentSplash"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_fragmentSplash_to_fragmentHome"
-            app:destination="@id/fragmentHome" />
+            app:destination="@id/fragmentHome"
+            app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="com.breens.mpesaappuiclone.FragmentHome"
+        android:name="com.breens.mpesaappuiclone.presentation.home.FragmentHome"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/fragmentTransact"
-        android:name="com.breens.mpesaappuiclone.FragmentTransact"
+        android:name="com.breens.mpesaappuiclone.presentation.transact.FragmentTransact"
         android:label="fragment_transact"
         tools:layout="@layout/fragment_transact" />
     <fragment
         android:id="@+id/fragmentDiscover"
-        android:name="com.breens.mpesaappuiclone.FragmentDiscover"
+        android:name="com.breens.mpesaappuiclone.presentation.discover.FragmentDiscover"
         android:label="fragment_discover"
         tools:layout="@layout/fragment_discover" />
     <fragment
         android:id="@+id/fragmentGrow"
-        android:name="com.breens.mpesaappuiclone.FragmentGrow"
+        android:name="com.breens.mpesaappuiclone.presentation.grow.FragmentGrow"
         android:label="fragment_grow"
         tools:layout="@layout/fragment_grow" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.breens.mpesaappuiclone
+package com.breens.mpesaappuiclone.presentation.splash
 
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.breens.mpesaappuiclone.R
 import com.breens.mpesaappuiclone.databinding.FragmentSplashBinding
 
 class FragmentSplash: Fragment(R.layout.fragment_splash) {
